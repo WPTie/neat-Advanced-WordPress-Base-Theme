@@ -17,7 +17,7 @@ Getting and Installing the Theme
 --------
 
 
-1. Grab a copy of this theme or Clone this theme, E.g. go to the themes folder then run ` git clone https://github.com/digisavvy/some-like-it-neat`
+1. Grab a copy of this theme or Clone this theme, E.g. go to the themes folder then run ` git clone https://github.com/ahmadawais/neat-Advanced-WordPress-Base-Theme`
 
 2. You need Node.js & Sass installed if you haven't installed it, go ahead and install it first. Once you have Node, Sass and the theme installed, the next step is simple enough.
 
