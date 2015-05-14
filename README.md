@@ -6,10 +6,12 @@ Neat is a starter theme built by Ahmad Awais [http://AhmadAwais.com/about/]
 Features
 --------
 
-1. Saas
-2. Gulp
-3. Lean PHP files with next to no syntax
-4. Custom architecture design
+- Saas
+- Gulp
+- Bower
+- Lean PHP files with next to no syntax
+- Custom architecture design
+- Theme zip file build with Gulp
 
 Getting and Installing the Theme
 --------
