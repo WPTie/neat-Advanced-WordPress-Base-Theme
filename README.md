@@ -34,3 +34,7 @@ Getting and Installing the Theme
 6. Run `gulp images` to optimize images and only place the images in `assets/img/raw/` folder, they'll moved to `assets/img/` once optimized
 
 7. To build an installable zip file of your theme, use command `gulp build` and your project.zip file will be created as well as a `buildTheme` folder, where you can see what was zipped.
+
+License
+--------
+Neat was released under GPL v2.
