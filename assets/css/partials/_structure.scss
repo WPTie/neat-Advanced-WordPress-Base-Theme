@@ -1,0 +1,608 @@
+/* ----------------------------------------------------------------------------
+ * Structure
+ * ------------------------------------------------------------------------- */
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* html element 62.5% font-size for REM use */
+html {
+    font-size: 62.5%;
+    height:100%;
+    min-height:100%;
+}
+
+body {
+    font: 400 11px/1.4 $f1_reg;
+    color: $c2;
+    margin: 0;
+    background: $w !important;
+    height:100%;
+    min-height:100%;
+
+
+}
+/* clear */
+.clear:before,
+.clear:after {
+    content: ' ';
+    display: table;
+}
+
+.clear:after {
+    clear: both;
+}
+
+.clear {
+    *zoom: 1;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    height: auto;
+}
+
+a {
+    color: #444;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #444;
+}
+
+a:focus {
+    outline: 0;
+}
+
+a:hover,
+a:active {
+    outline: 0;
+}
+
+input:focus {
+    outline: 0;
+    border: 1px solid $c2;
+}
+
+ol, ul {
+
+}
+select{
+    width: 100%;
+}
+
+/* ----------------------------------------------------------------------------
+ * Wrapper
+ * ------------------------------------------------------------------------- */
+
+/* wrapper */
+.aa_wrapper {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    overflow: hidden;
+
+    min-height:100%;
+
+    //-ms-word-wrap: break-word;
+    //word-wrap: break-word;
+    //word-break: break-all;
+}
+
+
+/* ----------------------------------------------------------------------------
+ * Pagination
+ * ------------------------------------------------------------------------- */
+
+.aa_pagination {
+    display: block;
+    width: 100%;
+
+    padding: 10px;
+    padding: 1rem;
+}
+
+
+/* ----------------------------------------------------------------------------
+ * Generic
+ * ------------------------------------------------------------------------- */
+.aa_510 {
+    padding: 5rem 10rem !important;
+}
+
+.aa_10 {
+    padding: 10rem;
+}
+
+.aa_heading {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    font: 400 3rem/1 $f2_reg;
+    text-transform: uppercase;
+}
+
+.aa_underline {
+    height: 1px;
+    display: block;
+    width: 5%;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+.aa_blk_dsc {
+    display: block;
+    width: 100%;
+
+    font: 300 1.8rem/1.3 $f1_lit;
+    text-align: center;
+    margin: 2rem 0;
+
+
+}
+
+.aa_txtnone{
+  color: transparent;
+  -webkit-transition: all 0.6s ease-in;
+     -moz-transition: all 0.6s ease-in;
+      -ms-transition: all 0.6s ease-in;
+       -o-transition: all 0.6s ease-in;
+          transition: all 0.6s ease-in;
+}
+
+/* ----------------------------------------------------------------------------
+ * Generic Widgets
+ * ------------------------------------------------------------------------- */
+ span.post-date {
+   display: block;
+   font: 100 1.2rem/1.5 $f2_thin;
+   text-transform: uppercase;
+ }
+
+ /* ----------------------------------------------------------------------------
+  * Search widget
+  * ------------------------------------------------------------------------- */
+
+ .widget_search {
+
+    display: table;
+    width: 100%;
+
+    .aa_search_input{
+        width: 100%;
+        padding: 2rem 3rem;
+        //font: 400 1.5rem/1 $f2_reg;
+        font: 100 1.5rem/1 $f1_bold;
+        border: 1px solid $c1;
+        box-sizing: border-box;
+        -webkit-border-radius: 0.25rem;
+                border-radius: 0.25rem;
+    }
+
+    .aa_search_submit{
+        width: 100%;
+        margin: 1rem 0;
+        text-align: center;
+        padding: 2rem 3rem;
+        border: none;
+        background: $btn;
+        color: $c1;
+        //font: 400 2rem/1 $f2_reg;
+        font: 700 2rem/1 $f1_bold;
+        text-transform: uppercase;
+
+        -webkit-border-radius: 0.25rem;
+                border-radius: 0.25rem;
+
+        &:hover{
+            background: $btn_hover;
+            -webkit-transition: 0.5s all;
+               -moz-transition: 0.5s all;
+                -ms-transition: 0.5s all;
+                 -o-transition: 0.5s all;
+                    transition: 0.5s all;
+        }
+
+        &:active,
+        &:focus,
+        &:visited{
+            border: none;
+            text-decoration: none;
+            position: relative;
+
+        }
+    }
+ }
+
+ /* --------------------------------------------------------------------------------
+  *
+  *  #aa_sidebar and .aa_single_inner_wrap are in a display:table
+  *  where #aa_sidebar is inline-block so that it doesn't cover all the 100%
+  *  height and free up the space. If it had been table-cell aa_single_inner_wrap
+  *  it would have covered 100% height, which was not desireable.
+  *
+  * ----------------------------------------------------------------------------- */
+ #aa_sidebar {
+     display: inline-block;
+     width: 100%;
+     vertical-align: top;
+     border: 1px dashed $c1;
+     padding: 5rem;
+     max-width: 51rem;
+     overflow: hidden;
+
+     margin: 0 auto;
+ }
+ #aa_sidebar ul li{
+     padding: 1rem;
+
+     & a{
+
+        //border-bottom: 1px solid darken($c1, 20%);
+        padding: 0.5rem;
+
+        &:hover{
+            opacity: 0.8;
+            -webkit-transition: all 0.6s ease;
+               -moz-transition: all 0.6s ease;
+                -ms-transition: all 0.6s ease;
+                 -o-transition: all 0.6s ease;
+                    transition: all 0.6s ease;
+        }
+    }
+}
+ #aa_sidebar .edd_empty_cart,
+ .aa_footer .edd_empty_cart{
+     background: none;
+     padding: 2rem;
+ }
+ /* ----------------------------------------------------------------------------
+  * Recent posts, meta, comments and all ul/li based widgets
+  * ------------------------------------------------------------------------- */
+  #aa_sidebar,
+  .aa_footer{
+    div {
+
+        div{
+            margin: 2rem 0;
+        }
+    }
+
+    h3{
+        font: 700 2.5rem/1 $f2_bold;
+        margin: 1rem 0;
+    }
+      ul{
+          display: block;
+          width: 100%;
+          font: 300 1.9rem/2 $f1_lit;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          li{
+              //background: lighten($tb,50%);
+              margin: 1rem 0;
+              padding: 1rem 2rem;
+              cursor: pointer;
+              max-width: 51rem;
+              overflow: hidden;
+
+              background: lighten($c1, 10%);
+
+              &:hover{
+                  opacity: 0.8;
+                  background: $c1;
+                  -webkit-transition: 0.6s all;
+                     -moz-transition: 0.6s all;
+                      -ms-transition: 0.6s all;
+                       -o-transition: 0.6s all;
+                          transition: 0.6s all;
+              }
+          }
+      }
+
+  }
+
+/* ----------------------------------------------------------------------------
+ * 404
+ * ------------------------------------------------------------------------- */
+.aa_404_sec{
+    text-align: center;
+}
+.aa_404_h1{
+    font: 700 10rem/1 $f2_bold;
+    color: $c2;
+}
+/* ----------------------------------------------------------------------------
+ * MISC
+ * ------------------------------------------------------------------------- */
+
+::selection {
+    background: $b;
+    color: $w;
+    text-shadow: none;
+}
+
+::-webkit-selection {
+    background: $b;
+    color: $w;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: $b;
+    color: $w;
+    text-shadow: none;
+}
+
+/* ----------------------------------------------------------------------------
+ * Responsive Structure
+ * ------------------------------------------------------------------------- */
+ .aa_510 {
+
+     @include r(240)  { padding: 1rem 1rem !important }
+     @include r(320)  { padding: 1rem 1rem !important }
+     @include r(480)  { padding: 3rem 3rem !important }
+     @include r(768)  { padding: 3rem 5rem !important }
+     @include r(1024) { padding: 3rem 5rem !important }
+     @include r(1280) { padding: 5rem 10rem !important }
+
+ }
+ .aa_10 {
+
+     @include r(240)  { padding: 1rem 1rem !important }
+     @include r(320)  { padding: 1rem 1rem !important }
+     @include r(480)  { padding: 3rem 3rem !important }
+     @include r(768)  { padding: 5rem 5rem !important }
+     @include r(1024) { padding: 5rem 5rem !important }
+     @include r(1280) { padding: 10rem 10rem !important }
+
+ }
+
+ .aa_heading{
+     @include r(240)  { font: 400 2rem/1 $f2_reg; }
+     @include r(320)  { font: 400 2.3rem/1 $f2_reg; }
+     @include r(480)  { font: 400 2.5rem/1 $f2_reg; }
+     @include r(768)  { font: 100 3.5rem/1 $f2_thin; }
+     @include r(1024) { font: 100 4rem/1 $f2_thin; }
+     @include r(1280) { font: 100 5rem/1 $f2_thin; }
+ }
+
+ .aa_blk_dsc{
+     @include r(240)  { font: 300 1.5rem/1.3 $f1_lit; }
+     @include r(320)  { font: 300 1.5rem/1.3 $f1_lit; }
+     @include r(480)  { font: 300 1.8rem/1.3 $f1_lit; }
+     @include r(768)  { font: 300 1.8rem/1.3 $f1_lit; }
+     @include r(1024) { font: 300 1.8rem/1.3 $f1_lit; }
+     @include r(1280) { font: 300 1.8rem/1.3 $f1_lit; }
+ }
+
+/* ----------------------------------------------------------------------------
+ * Headings
+ * ------------------------------------------------------------------------- */
+ #aa_sidebar h3,
+ .comment-reply-title,
+ .aa_comments_title,
+ .aa_pingbacks_title{
+
+     @include r(240)  { font: 400 2.3rem/1.5 $f2_reg;  }
+     @include r(320)  { font: 700 2.3rem/1.5 $f2_bold; }
+     @include r(480)  { font: 700 2.5rem/1.5 $f2_bold; }
+     @include r(768)  { font: 700 2.8rem/1.5 $f2_bold; }
+     @include r(1024) { font: 700 3rem/1.5 $f2_bold;   }
+     @include r(1280) { font: 700 3rem/1.5 $f2_bold;   }
+ }
+ #aa_sidebar .aa_search_submit{
+
+    @include r(240)  { font: 400 2rem/1.5 $f2_reg; }
+    @include r(320)  { font: 400 2rem/1.5 $f2_reg; }
+    @include r(480)  { font: 400 2rem/1.5 $f2_reg; }
+    @include r(768)  { font: 400 2rem/1.5 $f2_reg; }
+    @include r(1024) { font: 400 2rem/1.5 $f2_reg; }
+    @include r(1280) { font: 400 2rem/1.5 $f2_reg; }
+
+ }
+
+/* ----------------------------------------------------------------------------
+ * Texts
+ * ------------------------------------------------------------------------- */
+ #aa_sidebar,
+ #aa_sidebar ul,
+ #aa_sidebar .aa_search_input{
+
+     @include r(240)  { font: 300 1.4rem/1.8rem $f1_lit; }
+     @include r(320)  { font: 300 1.55rem/1.8 $f1_lit;   }
+     @include r(480)  { font: 300 1.8rem/1.8 $f1_lit;    }
+     @include r(768)  { font: 300 1.9rem/1.7 $f1_lit;    }
+     @include r(1024) { font: 300 2rem/3.1rem $f1_lit;   }
+     @include r(1280) { font: 300 2rem/3.1rem $f1_lit;   }
+ }
+
+ /* ----------------------------------------------------------------------------
+  * Generic headings for archive, tag, category and author pages
+  * ------------------------------------------------------------------------- */
+
+  .aa_h1{
+
+    background: $c2;
+    color: $c1;
+    margin: 0;
+    @include r(240)  { font: 400 2.3rem/1.5 $f2_reg;  }
+    @include r(320)  { font: 700 2.3rem/1.5 $f2_bold; }
+    @include r(480)  { font: 700 2.5rem/1.5 $f2_bold; }
+    @include r(768)  { font: 700 2.8rem/1.5 $f2_bold; }
+    @include r(1024) { font: 700 3rem/1.5 $f2_bold;   }
+    @include r(1280) { font: 700 3rem/1.5 $f2_bold;   }
+
+    & span{
+        padding: 1rem;
+        background: $tb;
+        -webkit-border-radius: 0.25rem;
+                border-radius: 0.25rem;
+    }
+ }
+
+/* ----------------------------------------------------------------------------
+ * Search input
+ * ------------------------------------------------------------------------- */
+ .aa_search_input{
+   color: $gb !important;
+ }
+/* ----------------------------------------------------------------------------
+ * Generic bps
+ * ------------------------------------------------------------------------- */
+
+ .aa_480nBelow{
+     @include r(240)  { display: block;}
+     @include r(320)  { display: block;}
+     @include r(480)  { display: block;}
+     @include r(768)  { display: none;}
+     @include r(1024) { display: none;}
+     @include r(1280) { display: none;}
+ }
+ .aa_768nBelow{
+     @include r(240)  { display: block;}
+     @include r(320)  { display: block;}
+     @include r(480)  { display: block;}
+     @include r(768)  { display: block;}
+     @include r(1024) { display: none;}
+     @include r(1280) { display: none;}
+ }
+.aa_generic_headings{
+    @include r(240)  { font: 400 2.3rem/1.5 $f2_reg;  }
+    @include r(320)  { font: 700 2.3rem/1.5 $f2_bold; }
+    @include r(480)  { font: 700 2.5rem/1.5 $f2_bold; }
+    @include r(768)  { font: 700 2.8rem/1.5 $f2_bold; }
+    @include r(1024) { font: 700 3rem/1.5 $f2_bold;   }
+    @include r(1280) { font: 700 3rem/1.5 $f2_bold;   }
+}
+.aa_generic_txt{
+
+    @include r(240)  { font: 300 1.4rem/1.8rem $f1_lit; }
+    @include r(320)  { font: 300 1.55rem/1.8 $f1_lit;   }
+    @include r(480)  { font: 300 1.8rem/1.8 $f1_lit;    }
+    @include r(768)  { font: 300 1.9rem/1.7 $f1_lit;    }
+    @include r(1024) { font: 300 2rem/3.1rem $f1_lit;   }
+    @include r(1280) { font: 300 2rem/3.1rem $f1_lit;   }
+
+}
+
+/* ----------------------------------------------------------------------------
+ * Generic Layout responsive stuff
+ * ------------------------------------------------------------------------- */
+ //Headings
+
+ .aa_gen_responsive h1,
+ .aa_blk_dsc h1 {
+
+     @include r(240)  { font: 400 2.3rem/1.5 $f2_reg; }
+     @include r(320)  { font: 700 2.3rem/1.5 $f2_bold; }
+     @include r(480)  { font: 700 2.5rem/1.5 $f2_bold; }
+     @include r(768)  { font: 700 2.8rem/1.5 $f2_bold; }
+     @include r(1024) { font: 700 3rem/1.5 $f2_bold; }
+     @include r(1280) { font: 700 5rem/1.5 $f2_bold; }
+
+ }
+
+
+  .aa_gen_responsive h2,
+  .aa_blk_dsc h2  {
+
+     @include r(240)  { font: 400 2rem/1.5 $f2_reg;  }
+     @include r(320)  { font: 700 2.1rem/1.5 $f2_bold; }
+     @include r(480)  { font: 700 2.3rem/1.5 $f2_bold; }
+     @include r(768)  { font: 700 2.4rem/1.5 $f2_bold; }
+     @include r(1024) { font: 700 2.5rem/1.5 $f2_bold;   }
+     @include r(1280) { font: 700 2.5rem/1.5 $f2_bold;   }
+
+  }
+  .aa_gen_responsive h3,
+  .aa_blk_dsc h3{
+
+      @include r(240)  { font: 400 1.9rem/1.5 $f2_reg;  }
+      @include r(320)  { font: 700 2rem/1.5 $f2_bold; }
+      @include r(480)  { font: 700 2.1rem/1.5 $f2_bold; }
+      @include r(768)  { font: 700 2.2rem/1.5 $f2_bold; }
+      @include r(1024) { font: 700 2.3rem/1.5 $f2_bold;   }
+      @include r(1280) { font: 700 2.3rem/1.5 $f2_bold;   }
+  }
+  .aa_gen_responsive h4,
+  .aa_gen_responsive h5,
+  .aa_gen_responsive h6,
+  .aa_blk_dsc h4,
+  .aa_blk_dsc h5,
+  .aa_blk_dsc h6 {
+
+     @include r(240)  { font: 400 1.7rem/1.5 $f2_reg;  }
+     @include r(320)  { font: 700 1.8rem/1.5 $f2_bold; }
+     @include r(480)  { font: 700 1.9rem/1.5 $f2_bold; }
+     @include r(768)  { font: 700 2rem/1.5 $f2_bold; }
+     @include r(1024) { font: 700 2.1rem/1.5 $f2_bold;   }
+     @include r(1280) { font: 700 2.1rem/1.5 $f2_bold;   }
+
+  }
+
+ //text sizes
+  .aa_gen_responsive,
+  .aa_gen_responsive pre,
+  .aa_gen_responsive ul,
+  .aa_gen_responsive ol,
+  .aa_blk_dsc,
+  .aa_blk_dsc pre,
+  .aa_blk_dsc ul,
+  .aa_blk_dsc ol{
+
+     @include r(240)  { font: 300 1.4rem/1.8rem $f1_lit; }
+     @include r(320)  { font: 300 1.55rem/1.8 $f1_lit; }
+     @include r(480)  { font: 300 1.8rem/1.8 $f1_lit; }
+     @include r(768)  { font: 300 1.9rem/1.7 $f1_lit; }
+     @include r(1024) { font: 300 2rem/3.1rem $f1_lit; }
+     @include r(1280) { font: 300 2rem/3.1rem $f1_lit; }
+
+  }
+
+  .aa_gen_responsive blockquote,
+  .aa_blk_dsc blockquote{
+
+     @include r(240)  { font: 100 1.4rem/1.8rem $f2_thin; }
+     @include r(320)  { font: 100 1.55rem/1.8 $f2_thin; }
+     @include r(480)  { font: 100 1.8rem/1.8 $f2_thin; }
+     @include r(768)  { font: 100 1.9rem/1.7 $f2_thin; }
+     @include r(1024) { font: 100 2rem/3.1rem $f2_thin; }
+     @include r(1280) { font: 100 2rem/3.1rem $f2_thin; }
+
+  }
+
+  .aa_gen_responsive ul,
+  .aa_blk_dsc ul{
+      @include r(240)  { padding: 0 0 0 1rem;margin: 0; }
+      @include r(320)  { padding: 0 0 0 1rem;margin: 0; }
+      @include r(480)  { padding: 0 0 0 1rem;margin: 0; }
+      @include r(768)  { padding: 0 0 0 5rem;margin: 0;}
+      @include r(1024) { padding: 0 0 0 5rem;margin: 0;}
+      @include r(1280) { padding: 0 0 0 5rem;margin: 0;}
+  }
+
+  .aa_gen_responsive ol,
+  .aa_blk_dsc ol{
+      @include r(240)  { padding: 0 0 0 3rem;margin: 0; }
+      @include r(320)  { padding: 0 0 0 3rem;margin: 0; }
+      @include r(480)  { padding: 0 0 0 3rem;margin: 0; }
+      @include r(768)  { padding: 0 0 0 7rem;margin: 0;}
+      @include r(1024) { padding: 0 0 0 7rem;margin: 0;}
+      @include r(1280) { padding: 0 0 0 7rem;margin: 0;}
+  }

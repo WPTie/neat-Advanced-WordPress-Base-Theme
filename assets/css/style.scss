@@ -1,0 +1,35 @@
+/*!
+    Theme Name: Neat
+    Description: Neat WordPress Theme
+    Version: 1.0.0
+    Theme URI: http://AhmadAwais.com
+    Author: AhmadAwais
+    Author URI: http://AhmadAwais.com
+    Tags: neat, wordpress, theme
+    License: GPLv2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+
+// Reset, Variables, Mixins, Etc
+// DO NOT EDIT ORDER OF FILES
+@import "partials/mixins";
+@import "partials/variables";
+@import "partials/normalize";
+
+// Structure, pagination, section, generic, selection
+@import "partials/structure";
+
+/* CSS Vendors*/
+
+// Owl Theme Coursel
+@import "vendor/vendorcss";
+
+// WPCore
+@import "partials/wpcore";
+
+
+
+
+
+
