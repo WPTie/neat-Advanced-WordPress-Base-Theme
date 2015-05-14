@@ -40,11 +40,11 @@ function aa_scripts()
          *     Order is important
          *
          */
-        wp_register_script('aa_plugins', get_template_directory_uri() . '/assets/js/plugins.min.js'); // Custom scripts
-        wp_enqueue_script('aa_plugins'); // Enqueue it!
+        wp_register_script('aa_vendorsJs', get_template_directory_uri() . '/assets/js/vendors.min.js'); // Custom scripts
+        wp_enqueue_script('aa_vendorsJs'); // Enqueue it!
 
-        wp_register_script('aa_scripts', get_template_directory_uri() . '/assets/js/scripts.min.js'); // Custom scripts
-        wp_enqueue_script('aa_scripts'); // Enqueue it!
+        wp_register_script('aa_customJs', get_template_directory_uri() . '/assets/js/custom.min.js'); // Custom scripts
+        wp_enqueue_script('aa_customJs'); // Enqueue it!
 
 
         /**
