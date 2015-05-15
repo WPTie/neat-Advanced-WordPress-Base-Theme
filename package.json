@@ -1,8 +1,12 @@
 {
-  "name"           : "neat",
-  "version"        : "1.0.0",
-  "dependencies"   : {},
-  "devDependencies": {
+    "name"           : "neat",
+    "version"        : "1.0.0",
+    "repository"     : {
+                        "type": "git",
+                        "url" : "https://github.com/ahmadawais/neat-Advanced-WordPress-Base-Theme"
+    }
+    "dependencies"   : {},
+    "devDependencies": {
 
                         "browser-sync"              : "^2.4.0",
                         "gulp"                      : "^3.8.11",
@@ -34,5 +38,5 @@
                         "gulp-filter"               : "^2.0.2",
                         "tiny-lr"                   : "0.0.7"
 
-  }
+    }
 }
